@@ -14,22 +14,6 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
-                    <svg class="bi" aria-hidden="true">
-                      <use xlink:href="#file-earmark"></use>
-                    </svg>
-                    Orders
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
-                    <svg class="bi" aria-hidden="true">
-                      <use xlink:href="#cart"></use>
-                    </svg>
-                    Products
-                  </a>
-                </li>
-                <li class="nav-item">
                   <a class="nav-link d-flex align-items-center gap-2" href="../aluno">
                     <svg class="bi" aria-hidden="true">
                       <use xlink:href="#people"></use>
@@ -38,11 +22,27 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link d-flex align-items-center gap-2" href="#">
+                  <a class="nav-link d-flex align-items-center gap-2" href="../autor">
+                    <svg class="bi" aria-hidden="true">
+                      <use xlink:href="#people"></use>
+                    </svg>
+                    Autores
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center gap-2" href="../editora">
+                    <svg class="bi" aria-hidden="true">
+                      <use xlink:href="#file-earmark"></use>
+                    </svg>
+                    Editoras
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link d-flex align-items-center gap-2" href="../categoria">
                     <svg class="bi" aria-hidden="true">
                       <use xlink:href="#graph-up"></use>
                     </svg>
-                    Reports
+                    Categorias
                   </a>
                 </li>
                 <li class="nav-item">
