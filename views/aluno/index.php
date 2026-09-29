@@ -368,7 +368,9 @@
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
             <h1 class="h2">Gerenciamento de Alunos</h1>
-            
+              <p>
+            <a href="create.php">Novo Aluno </a>
+            </p>
           </div>
           
           <div class="table-responsive small">

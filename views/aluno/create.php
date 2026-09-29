@@ -1,11 +1,3 @@
-<?php
-    // Incluir o arquivo para carregamento das classes
-    require "../../autoload.php";
-
-    // Instanciar um objeto da classe DAO
-    $dao = new AutorDAO();
-?>
-
 <!doctype html>
 <html lang="en" data-bs-theme="auto">
   <head>
@@ -367,26 +359,34 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Gerenciamento de Autores</h1>
-          
+            <h1 class="h2">Cadastrar Aluno</h1>
+              <p>
+            <a href="create.php">Novo Aluno </a>
+            </p>
           </div>
           
           <div class="table-responsive small">
-            <table class="table table-hover">
-              <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Nacionalidade</th>
-              </tr>
-              <?php foreach($dao->read() as $autor) : ?>
-                <tr>
-                  <td><?= $autor->getId() ?></td>
-                  <td><?= $autor->getNome() ?></td>
-                  <td><?= $autor->getNacionalidade() ?></td>
-                </tr>
-              <?php endforeach ?>
-            </table>
+            <form action="insert.php" method="post">
+              <div class="form-group">
+                 <label for="nome">NOME</label>
+                 <input type="text" name="nome" class="form-control">
           </div>
+
+             <div class="form-group">
+                 <label for="email">E-mail</label>
+                 <input type="text" name="email" class="form-control">
+          </div>
+
+             <div class="form-group">
+                 <label for="nome">Matricula</label>
+                 <input type="text" name="matricula" class="form-control">
+          </div>
+        
+          <div class="form-group">
+            <input type="reset" valeu="Limpar" class="btn bnt-">
+              <input type="submit" valeu="Cadastrar" class="btn bnt-wanig">
+</form>
+            </div>
         </main>
       </div>
     </div>
