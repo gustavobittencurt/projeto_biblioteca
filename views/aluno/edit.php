@@ -1,9 +1,10 @@
 <?php
-    // Incluir o arquivo para carregamento das classes
     require "../../autoload.php";
 
-    // Instanciar um objeto da classe DAO
     $dao = new AlunoDAO();
+    $aluno = $dao->find($_GET['id']);
+
+
 ?>
 
 <!doctype html>
@@ -367,40 +368,33 @@
           <div
             class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
           >
-            <h1 class="h2">Gerenciamento de Alunos</h1>
-
+            <h1 class="h2">Editar Aluno</h1>
           </div>
-          <p>
-              <a href="create.php">Novo Aluno </a>
-          </p>
           
           <div class="table-responsive small">
-            <table class="table table-hover">
-              <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>Matricula</th>
-                <th>Ações</th>
-              </tr>
-              <?php foreach($dao->read() as $aluno) : ?>
-                <tr>
-                  <td><?= $aluno->getId() ?></td>
-                  <td><?= $aluno->getNome() ?></td>
-                  <td><?= $aluno->getEmail() ?></td>
-                  <td><?= $aluno->getMatricula() ?></td>
-                  <td>
-                    <a href="edit.php?id=<?= $aluno->getId() ?>">
-                      Editar
-                    </a>
-                    <a href="destroy.php?id=<?= $aluno->getId() ?>">
-                      Excluir
-                    </a>
-                  </td>
-                </tr>
-              <?php endforeach ?>
-            </table>
+            <form action="update.php" method="post">
+              <div class="form-group">
+                 <label for="nome">Nome</label>
+                 <input type="text" name="nome" value="<?= $aluno->getNome() ?>" class="form-control">
           </div>
+
+             <div class="form-group">
+                 <label for="email">Email</label>
+                 <input type="text" name="email" value="<?= $aluno->getEmail() ?>" class="form-control">
+          </div>
+
+             <div class="form-group">
+                 <label for="matricula">Matricula</label>
+                 <input type="text" name="matricula" value="<?= $aluno->getMatricula() ?>" class="form-control">
+          </div>
+
+          <input type="hidden" name="id" value="<?= $aluno->getId() ?>">
+        
+          <div class="form-group">
+            <input type="reset" value="Limpar" class="btn btn-success">
+              <input type="submit" value="Cadastrar" class="btn btn-success">
+            </div>
+        </form>
         </main>
       </div>
     </div>

@@ -1,17 +1,16 @@
 <?php
-   //Incluir o arquivo de autoload
-   require "../../autoload.php";
+    //Incluir o arquivo de autoload
+    require "../../autoload.php";
 
-   //Instanciar um objeto da classe (bean)
-   $aluno =new Aluno ();
+    //Instanciar um objeto da classe (bean)
+    $aluno = New Aluno ();
 
-   //Defenir os valores dos atributos a partir do form
-   $aluno->setNome($_POST['nome']);
-     $aluno->setEmail($_POST['email']);
-       $aluno->setMatricula($_POST['matricula']);
+    //Definir os valores dos atributos a partir do formulário
+    $aluno->setNome($_POST['nome']);
+    $aluno->setEmail($_POST['email']);
+    $aluno->setMatricula($_POST['matricula']);
       
-       $dao=new AlunoDao ();
+    $dao = new AlunoDAO ();
+    $dao->create ($aluno);
 
-       $dao->create ($aluno);
-
-       header('location; index.php');
+    header('location: index.php');

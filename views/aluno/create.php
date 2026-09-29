@@ -368,23 +368,23 @@
           <div class="table-responsive small">
             <form action="insert.php" method="post">
               <div class="form-group">
-                 <label for="nome">NOME</label>
+                 <label for="nome">Nome</label>
                  <input type="text" name="nome" class="form-control">
           </div>
 
              <div class="form-group">
-                 <label for="email">E-mail</label>
+                 <label for="email">Email</label>
                  <input type="text" name="email" class="form-control">
           </div>
 
              <div class="form-group">
-                 <label for="nome">Matricula</label>
+                 <label for="matricula">Matricula</label>
                  <input type="text" name="matricula" class="form-control">
           </div>
         
           <div class="form-group">
-            <input type="reset" valeu="Limpar" class="btn bnt-">
-              <input type="submit" valeu="Cadastrar" class="btn bnt-wanig">
+            <input type="reset" value="Limpar" class="btn btn-success">
+              <input type="submit" value="Cadastrar" class="btn btn-success">
 </form>
             </div>
         </main>
